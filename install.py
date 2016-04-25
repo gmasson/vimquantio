@@ -21,7 +21,7 @@ conn.commit()
 
 # Criando a tabela (Cache)
 database.execute("""
-CREATE TABLE explorer_urls (
+CREATE TABLE cache (
         id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
         url TEXT NOT NULL,
         html TEXT NOT NULL
