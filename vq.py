@@ -9,7 +9,7 @@
 
 import urllib2
 
-# URL para ser minerada (obtida do bando de dados do explorador)
+# URL para ser minerada
 website = "http://gmasson.com.br/"
 
 link = urllib2.urlopen(website).read()
@@ -24,13 +24,3 @@ print("<title> ---------------------")
 for i in tag_title:
   print i
 
-
-# Mineração ignorando parametros da tag
-tag_p = link.split('<p')[1:]
-tag_p = [ tag.split('</p>')[0].split('>',1)[1] for tag in tag_p ]
-
-print("<p> ---------------------")
-
-# aqui é para salvar no banco de dados
-for i in tag_p:
-  print i
